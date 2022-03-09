@@ -66,10 +66,10 @@ This program must:
 
 | Input | Output |
 |-------|--------|
-| "Green" | `Green: 1` |
-| "Green, green" | `Green: 2` |
+| "Green" | `Green: 1\nAmber: 0\nRed: 0` |
+| "Green, green" | `Green: 2\nAmber: 0\nRed: 0` |
 | "Green, Amber, red" | `Green: 1\nAmber: 1\nRed: 1\n` |
-| "Green, Yellow" | `Green: 1\nUncounted: 1` |
+| "Green, Yellow" | `Green: 1\n\nAmber: 0\nRed: 0\nUncounted: 1` |
 | "Green, Amber, RED, green, Yellow, Red" | `Green: 2\nAmber: 1\nRed: 2\nUncounted: 1` |
 | ["Green", "Amber", "Red"] | Error `Please input a string of comma-separated values.` |
 
