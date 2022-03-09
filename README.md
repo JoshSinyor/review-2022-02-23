@@ -34,18 +34,22 @@ This project requires Ruby 3.0.0. If you do not have Ruby 3.0.0, install it usin
 
 ## Specification
 
-1. The purpose of this program is to accept input and product output.
-2. When the program receives input *a*, it should output *x* as an `Integer`.
-3. When the program receives input *b*, it should output *y* as a `String`.
-4. When the program receives input that is neither *a* nor *b*, it should output *z*.
+1. The purpose of this program is process school test results.
+2. This program receives input of results as a string of comma-separated values. These values could be in any combination of upper- and lower-case.
+3. This program should parse this string, and sum the total of each instance of the colours `green`, `amber` and `red`.
+4. The program should return the totals in the format `Colour: #`, with each of the three colours returned on a new line.
+5. Even if no instances of the three colours are found, the sum of that colour should be returned.
+5. This program should sum the total of any instance of any other input as `Uncounted`.
+6. If no `Uncounted` instances are found, the program should not return `Uncounted` as a category.
 
 ### Input/Output Table
 
 | Input | Output |
 |-------|--------|
-| *a* | `x` |
-| *b* | `y` |
-| *c* | `z` |
+| "Green" | `Green: 1` |
+| "Green, green" | `Green: 2` |
+| "Green, AMBER, Red" | `Green: 1\nAmber: 1\nRed: 1\n` |
+| "Green, Yellow" | `Green: 1\nUncounted: 1` |
 
 ---
 
@@ -53,17 +57,21 @@ This project requires Ruby 3.0.0. If you do not have Ruby 3.0.0, install it usin
 
 This program must:
 
-1. [ ] Upon input of *aa*, output *xx*.
-2. [ ] Upon input of *ab*, output *xy*.
-3. [ ] Upon input of *abc*, output *xyz*.
+1. [ ] Parse the input of a  of the colours green, amber or red.
+2. [ ] Parse the input of a CSV string of at least two of green, amber and red.
+3. [ ] Parse the input of a CSV string of colours which are not green, amber or red.
+4. [ ] Raise error `Please input a string of comma-separated values.` upon the input of anything other than a `String` object.
 
 ### Input/Output Table
 
 | Input | Output |
 |-------|--------|
-| *aa* | `xx` |
-| *ab* | `yy` |
-| *abc* | `xyz` |
+| "Green" | `Green: 1` |
+| "Green, green" | `Green: 2` |
+| "Green, Amber, red" | `Green: 1\nAmber: 1\nRed: 1\n` |
+| "Green, Yellow" | `Green: 1\nUncounted: 1` |
+| "Green, Amber, RED, green, Yellow, Red" | `Green: 2\nAmber: 1\nRed: 2\nUncounted: 1` |
+| ["Green", "Amber", "Red"] | Error `Please input a string of comma-separated values.` |
 
 ---
 
