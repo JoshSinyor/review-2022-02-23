@@ -8,8 +8,19 @@ private
 
 def parse_results_array(results_array)
   green = 0
+  amber = 0
+  red = 0
 
-  results_array.each { |_result| green += 1 }
+  results_array.each do |result|
+    case result.downcase
+    when "green"
+      green += 1
+    when "amber"
+      amber += 1
+    when "red"
+      red += 1
+    end
+  end
 
-  "Green: #{green}"
+  "Green: #{green}\nAmber: #{amber}\nRed: #{red}"
 end
