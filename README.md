@@ -57,10 +57,11 @@ This project requires Ruby 3.0.0. If you do not have Ruby 3.0.0, install it usin
 
 This program must:
 
-1. [x] Parse the input of string of the colour green, amber or red.
-2. [x] Parse the input of a CSV string of at least two of green, amber and red.
-3. [x] Parse the input of a CSV string of colours which are not green, amber or red.
-4. [ ] Raise error `Please input a string of comma-separated values.` upon the input of anything other than a `String` object.
+1. [x] Parse the input of a string of the colour green, amber or red.
+2. [x] Parse the input of a CSV string of at least two instances of the colour green, amber or red.
+3. [x] Parse the input of a CSV string of at least two of the colours green, amber and red.
+4. [x] Parse the input of a CSV string of colours which are not green, amber or red.
+5. [x] Raise error `Please input a string of comma-separated values.` upon the input of anything other than a `String` object.
 
 ### Input/Output Table
 

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 def total_results(results)
+  raise 'Please input a string of comma-separated values.' unless results.is_a? String
+
   results = results.split(',').map(&:strip).map(&:capitalize)
   uncounted = results.count { |result| !%w[Green Amber Red].include? result }
   return_totals(results, uncounted)
