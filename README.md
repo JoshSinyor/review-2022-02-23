@@ -59,7 +59,7 @@ This program must:
 
 1. [x] Parse the input of string of the colour green, amber or red.
 2. [x] Parse the input of a CSV string of at least two of green, amber and red.
-3. [ ] Parse the input of a CSV string of colours which are not green, amber or red.
+3. [x] Parse the input of a CSV string of colours which are not green, amber or red.
 4. [ ] Raise error `Please input a string of comma-separated values.` upon the input of anything other than a `String` object.
 
 ### Input/Output Table

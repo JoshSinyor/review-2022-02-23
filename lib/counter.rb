@@ -2,11 +2,17 @@
 
 def total_results(results)
   results = results.split(',').map(&:strip).map(&:capitalize)
-  parse_results(results)
+  uncounted = results.count { |result| !%w[Green Amber Red].include? result }
+  return_totals(results, uncounted)
 end
 
 private
 
-def parse_results(results)
-  "Green: #{results.count('Green')}\nAmber: #{results.count('Amber')}\nRed: #{results.count('Red')}"
+def return_totals(results, uncounted)
+  <<~HEREDOC.rstrip
+    Green: #{results.count('Green')}
+    Amber: #{results.count('Amber')}
+    Red: #{results.count('Red')}
+    #{"Uncounted: #{uncounted}" if uncounted != 0}
+  HEREDOC
 end
