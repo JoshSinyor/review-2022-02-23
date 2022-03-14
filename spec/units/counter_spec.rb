@@ -19,7 +19,7 @@ describe 'total_results' do
     expect(total_results('Green, Yellow')).to eq "Green: 1\nAmber: 0\nRed: 0\nUncounted: 1"
   end
 
-  it 'raises an error when not supplied with a Strin (fifth acceptance criterion)' do
+  it 'raises an error when not supplied with a String (fifth acceptance criterion)' do
     expect do
       total_results(%w[Green Amber Red])
     end.to raise_error('Please input a string of comma-separated values.')
